@@ -1,0 +1,16 @@
+dconf/
+dleyna-renderer-service.conf
+fcitx/
+gnome-boxes/
+google-chrome/
+goa*/
+gtk*/
+menus/
+mimeapps.list
+nautilus/
+neofetch/
+pulse/
+Transmission Remote GUI/
+Trolltech.conf
+yay/
+

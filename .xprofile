@@ -1,0 +1,4 @@
+
+export GTK_THEME=Numix:dark
+export GTK2_RC_FILES=/usr/share/themes/Numix/gtk-2.0/gtkrc
+
