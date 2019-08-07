@@ -1,3 +1,4 @@
+Code/
 dconf/
 dleyna-renderer-service.conf
 fcitx/
@@ -10,7 +11,9 @@ mimeapps.list
 nautilus/
 neofetch/
 pulse/
+smplayer/
 Transmission Remote GUI/
 Trolltech.conf
+Typora*
 yay/
 

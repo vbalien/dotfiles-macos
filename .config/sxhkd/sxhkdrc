@@ -136,8 +136,8 @@ XF86AudioRaiseVolume
 	pactl set-sink-volume @DEFAULT_SINK@ +5%
 
 XF86MonBrightnessUp
-	lux -a 10%
+	light -A 10
 
 XF86MonBrightnessDown
-	lux -s 10%
+	light -U 10
 

@@ -13,6 +13,7 @@ killall telegram; telegram &
 /home/vbalien/SVP\ 4/SVPManager &
 transgui &
 nm-applet &
+blueman-applet &
 
 # TrackPoint Speed
 # xinput --set-prop "10" "libinput Accel Speed" -0.4
