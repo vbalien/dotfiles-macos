@@ -1,7 +1,9 @@
 Code/
+configstore/
 dconf/
 dleyna-renderer-service.conf
 fcitx/
+gconf/
 gnome-boxes/
 google-chrome/
 goa*/
