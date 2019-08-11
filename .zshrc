@@ -106,4 +106,5 @@ alias open="xdg-open"
 neofetch
 # tput setaf 12 ; toilet -f smblock "vbalien  @  ThinkPad" -F border
 
+
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

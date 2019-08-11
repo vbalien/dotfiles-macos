@@ -10,5 +10,3 @@ export LIBVA_DRIVER_NAME=iHD
 
 export GTK_THEME=Numix:dark
 export GTK2_RC_FILES=/usr/share/themes/Numix/gtk-2.0/gtkrc
-
-xinput --set-prop "11" "libinput Accel Speed" -0.4

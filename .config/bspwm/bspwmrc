@@ -1,7 +1,23 @@
 #! /bin/sh
 
+# Runs a program unless that program is already running
+function conditional_run {
+  local program_name=$1
 
-sxhkd &
+  ps_result=$(ps aux \
+      | grep "${program_name}" \
+      | grep -v "grep" \
+      | wc -l
+      )
+  if [ $ps_result -eq 0 ]; then
+      echo "Running $program_name"
+      `$program_name` &
+  else
+      echo "$program_name already running"
+  fi
+}
+
+
 compton --config ~/.config/compton.conf -b &
 feh --bg-scale ~/.config/wallpaper/fireforce.png &
 fcitx -dr &
@@ -9,18 +25,21 @@ fcitx -dr &
 $HOME/.config/polybar/launch.sh
 wmname LG3D
 
-killall telegram; telegram &
-/home/vbalien/SVP\ 4/SVPManager &
-transgui &
-nm-applet &
-blueman-applet &
+killall xss-lock; xss-lock -- i3lock-fancy -n &
 
-# TrackPoint Speed
-# xinput --set-prop "10" "libinput Accel Speed" -0.4
-# xinput --set-prop "9" "libinput Accel Speed" -0.8
+conditional_run SVPManager
+conditional_run transgui
+conditional_run nm-applet
+conditional_run blueman-applet
+conditional_run telegram
+conditional_run sxhkd
+
+# Elan input setting
+xinput set-prop 'Elan Touchpad' 319 1 # tap to click
 
 # Default Cursor
 xsetroot -cursor_name left_ptr
+
 
 
 bspc monitor HDMI-0 -d 1 2 3 4 5 6 7 8 9
